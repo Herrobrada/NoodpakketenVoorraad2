@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bestel hier je Noodpakket!</title>
+  <title>Bestel hier je nu Noodpakket!</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
@@ -50,11 +50,19 @@
       width: 100%;
       max-width: 360px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex; /* Added for vertical alignment */
+      flex-direction: column; /* Added for vertical alignment */
     }
 
     .product:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px; /* Space between image and text */
     }
 
     .product h2 {
@@ -79,6 +87,10 @@
       list-style-type: circle;
     }
 
+      .product a.btn {
+        margin-top: auto; /* Push button to the bottom */
+      }
+
     .btn {
       display: inline-block;
       background-color: #48dbfb;
@@ -88,10 +100,25 @@
       border-radius: 8px;
       font-weight: 600;
       transition: background-color 0.3s ease;
+      text-align: center; /* Center the text */
     }
 
     .btn:hover {
       background-color: #0abde3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
@@ -104,62 +131,72 @@
 </head>
 <body>
   <header>
-        <h1>Bestel hier je noodpakket!</h1>
+    <h1>Bestel hier je noodpakket!</h1>
     <p>Wees voorbereid. Zorg voor jezelf en je dierbaren in de eerste 72 uur van een crisis.</p>
+    <p>Laat je ontzorgen door Kevin & Coen, bestel een noodpakket en wees geen oen.</p>
   </header>
 
   <section style="background-color: #fff3cd; color: #856404; padding: 20px; text-align: center; font-size: 1.1rem; border-top: 2px solid #ffeeba; border-bottom: 2px solid #ffeeba;">
     <p><strong>Pakketten zoals geadviseerd door</strong> <a href="https://www.denkvooruit.nl" target="_blank" style="color: #856404; text-decoration: underline;">denkvooruit.nl</a> – een initiatief van de Nederlandse overheid.</p>
   </section>
 
-  <div class="container">
-    <div class="product">
-      <h2>Basic Noodpakket (€80)</h2>
-      <p>Essentiële items om de eerste dagen te overbruggen.</p>
-      <ul>
-        <li>Drinkwater (3L p.p.p.d.)</li>
-        <li>Lang houdbaar voedsel(Genoeg eten voor drie dagen, o.a. Mais, bonen, Tonijn</li>
-        <li>Zaklamp + batterijen</li>
-        <li>Opwindbare radio</li>
-        <li>Kleine EHBO-kit</li>
-        <li>Tandpasta, doekjes & toiletpapier</li>
-        <li>Thermodeken</li>
-        <li>Fluitje</li>
-      </ul>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcNpZIYYfbu-8ybebvGfzrQX0OmJkdCPsfELVtDx-f8R4e6w/viewform?usp=header" class="btn" target="_blank">Koop nu</a>
-    </div>
+  <main>
+    <div class="container">
+      <div class="product">
+        <img src="http://googleusercontent.com/generated_image_content/1" alt="Basis Noodpakket">
+        <h2>Basis Noodpakket (€100)</h2>
+        <p>Dit Basis noodpakket is noodzakelijk om tijdens een noodsituatie 2 personen veilig te houden.</p>
+        <ul>
+          <li>10 liter drinkwater</li>
+          <li>Lang houdbaar voedsel voor 3 dagen</li>
+          <li>Opwindbare radio, zaklamp en telefoonoplader in 1</li>
+          <li>Kleine EHBO-kit</li>
+          <li>Thermodeken</li>
+          <li>Fluitje</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcNpZIYYfbu-8ybebvGfzrQX0OmJkdCPsfELVtDx-f8R4e6w/viewform?usp=header" class="btn" target="_blank">Koop nu</a>
+      </div>
 
-    <div class="product">
-      <h2>Premium Noodpakket (€150)</h2>
-      <p>Extra hulpmiddelen en comfort voor langere noodsituaties.</p>
-      <ul>
-        <li>Alles uit het Basic pakket</li>
-        <li>Multitool & ducttape</li>
-        <li>Waterzuiveringstabletten</li>
-        <li>Grote EHBO-kit met schaar</li>
-        <li>Powerbank (handmatig of solar)</li>
-        <li>Waterdichte poncho & kleding</li>
-        <li>Kaarsen + lucifers</li>
-        <li>Contant geld (advies)</li>
-      </ul>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH-sF3f9h5CfFznoBhO1OrgvIdAtlsDBwgxjgbHWnbxGd-ww/viewform?usp=header" class="btn" target="_blank">Koop nu</a>
-    </div>
+      <div class="product">
+         <img src="http://googleusercontent.com/generated_image_content/2" alt="Premium Noodpakket">
+        <h2>Premium Noodpakket (€150)</h2>
+         <p>Dit pakket biedt perfecte voorbereiding voor één week en is <strong>voornamelijk geschikt voor jonge ouders</strong>.</p>
+        <ul>
+          <li>Lang houdbaar voedsel (Genoeg eten voor 7 dagen, inclusief babyvoeding)</li>
+          <li>Opwindbare radio, zaklamp en telefoonoplader in 1 </li>
+          <li>Thermodeken</li>
+          <li>Fluitje</li>
+          <li>Multitool & ducttape</li>
+          <li>Waterzuiveringstabletten</li>
+          <li>Grote EHBO-kit met schaar</li>
+          <li>Wasbare luiers</li>
+          <li>Waterdichte poncho & kleding</li>
+          <li>Kaarsen + lucifers</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH-sF3f9h5CfFznoBhO1OrgvIdAtlsDBwgxjgbHWnbxGd-ww/viewform?usp=header" class="btn" target="_blank">Koop nu</a>
+      </div>
 
-    <div class="product">
-      <h2>Luxe Noodpakket (€200)</h2>
-      <p>Maximale voorbereiding voor extreme situaties of gezinnen.</p>
-      <ul>
-        <li>Alles uit het Premium pakket</li>
-        <li>Opvouwbaar kooktoestel + brandstof</li>
-        <li>Solar lantaarn</li>
-        <li>Thermische kleding & mat</li>
-        <li>Notitieboek & potlood</li>
-        <li>Waterdichte tas + documentenhoes</li>
-        <li>Reservesleutels & adreslijst</li>
-      </ul>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSews_yzfoD5rYgLjL7Xp_sZiM658JW-xcq7b5H5JG9fnPuhSw/viewform?usp=header" class="btn" target="_blank">Koop nu</a>
+      <div class="product">
+         <img src="http://googleusercontent.com/generated_image_content/0" alt="Luxe Noodpakket">
+        <h2>Luxe Noodpakket (€300)</h2>
+        <p>Met dit luxe noodpakket is een noodsituatie maximaal genieten.</p>
+        <p>Voor ieder die er in barre tijden echt warmpjes bij wilt zitten</p>
+        <ul>
+          <li>Alles uit het Basis Noodpakket</li>
+          <li>Opvouwbaar kooktoestel + brandstof</li>
+          <li>Solar lantaarn</li>
+          <li>Thermische kleding & mat</li>
+          <li>Notitieboek & potlood</li>
+          <li>Paprika chips</li>
+          <li>Kaviaar</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSews_yzfoD5rYgLjL7Xp_sZiM658JW-xcq7b5H5JG9fnPuhSw/viewform?usp=header" class="btn" target="_blank">Koop nu</a>
+      </div>
     </div>
-  </div>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Kevin & Coen Noodpakketten. Alle rechten voorbehouden.</p>
+  </footer>
 </body>
 </html>
