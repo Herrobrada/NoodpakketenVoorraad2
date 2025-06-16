@@ -49,6 +49,19 @@
       font-weight: 600;
     }
 
+    /* Styling voor de tijdelijke aanbieding banner */
+    .temporary-offer-banner {
+      background-color: #d4edda; /* Zacht groen */
+      color: #155724; /* Donkergroen */
+      padding: 15px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #c3e6cb;
+      margin-top: -20px; /* Trek iets omhoog naar de header */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
     .container {
       max-width: 1200px;
       margin: 40px auto;
@@ -86,8 +99,22 @@
     .product h2 {
       font-size: 1.4rem;
       margin-bottom: 10px;
-      color: #ff6b6b; /* Originele rood/roze kleur */
+      color: #333; /* Algemene kleur voor de titel, niet de prijs */
       text-align: center;
+    }
+
+    /* Styling voor de prijsweergave - AANGEPAST */
+    .price-old {
+      text-decoration: line-through; /* Doorgestreepte tekst */
+      color: #dc3545; /* Rood voor de oude prijs */
+      font-size: 0.9em; /* Iets kleiner dan de nieuwe prijs */
+      margin-right: 8px; /* Ruimte tussen oude en nieuwe prijs */
+    }
+
+    .price-new {
+      color: #28a745; /* Groen voor de nieuwe prijs */
+      font-size: 1.1em; /* Iets groter om op te vallen */
+      font-weight: 800; /* Extra vetgedrukt */
     }
 
     .product p {
@@ -181,6 +208,10 @@
         padding: 15px;
         font-size: 1rem;
       }
+      .temporary-offer-banner {
+        font-size: 1rem;
+        padding: 10px 15px;
+      }
       .container {
         grid-template-columns: 1fr; /* Stack kolommen op kleine schermen */
         padding: 0 15px;
@@ -240,6 +271,10 @@
     <p>Laat je ontzorgen door Kevin & Coen, bestel een noodpakket en wees geen oen.</p>
   </header>
 
+  <div class="temporary-offer-banner">
+    Tijdelijke aanbieding! Profiteer nu van extra korting op alle pakketten!
+  </div>
+
   <section class="info-banner">
     <p><strong>Pakketten zoals geadviseerd door</strong> <a href="https://www.denkvooruit.nl" target="_blank">denkvooruit.nl</a> – een initiatief van de Nederlandse overheid.</p>
   </section>
@@ -248,7 +283,7 @@
     <div class="container">
       <div class="product">
         <img src="basis-noodpakket.jpg" alt="Basis Noodpakket">
-        <h2>Basis Noodpakket (€100)</h2>
+        <h2><span class="price-old">€120</span> <span class="price-new">€100</span></h2>
         <p>Dit Basis noodpakket is noodzakelijk om tijdens een noodsituatie 2 personen veilig te houden.</p>
         <ul>
           <li>10 liter drinkwater</li>
@@ -263,7 +298,7 @@
 
       <div class="product">
         <img src="premium-noodpakket.jpg" alt="Premium Noodpakket">
-        <h2>Premium Noodpakket (€150)</h2>
+        <h2><span class="price-old">€180</span> <span class="price-new">€150</span></h2>
         <p>Dit pakket biedt perfecte voorbereiding voor één week en is <strong>voornamelijk geschikt voor jonge ouders</strong>.</p>
         <ul>
           <li>Lang houdbaar voedsel (Genoeg eten voor 7 dagen, inclusief babyvoeding)</li>
@@ -281,8 +316,8 @@
       </div>
 
       <div class="product">
-        <img src="Luxe-noodpakket.jpg" alt="Luxe Noodpakket">
-        <h2>Luxe Noodpakket (€300)</h2>
+        <img src="luxe-noodpakket.jpg" alt="Luxe Noodpakket">
+        <h2><span class="price-old">€350</span> <span class="price-new">€300</span></h2>
         <p>Met dit luxe noodpakket is een noodsituatie maximaal genieten.</p>
         <p>Voor ieder die er in barre tijden echt warmpjes bij wilt zitten</p>
         <ul>
